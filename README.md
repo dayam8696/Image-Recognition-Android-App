@@ -38,5 +38,3 @@ Given sufficient training data, an image classification model can predict whethe
 
 ## Contributing
 Contributions are welcome!
-
--
