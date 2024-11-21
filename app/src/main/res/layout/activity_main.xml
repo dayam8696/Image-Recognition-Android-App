@@ -4,52 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    android:padding="16dp">
 
-    <ImageView
-        android:id="@+id/imageview"
-        android:layout_width="340dp"
+    <!-- Image Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="400dp"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:scaleType="centerCrop" />
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
 
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Buttons -->
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="8dp"
-        android:orientation="horizontal">
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="2">
 
         <Button
             android:id="@+id/selectbrn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/primaryColor"
             android:text="Select"
-            android:layout_gravity="left"
-            android:layout_marginLeft="1dp"/>
-
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/predictbrn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/secondaryColor"
             android:text="Predict"
-            android:layout_gravity="left"
-            android:layout_marginLeft="100dp"/>
-
-
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
     </LinearLayout>
 
+    <!-- Text -->
     <TextView
         android:id="@+id/textview"
-        android:text="Select and Predict"
-        android:textSize="24dp"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="32dp"
         android:gravity="center"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="60dp"/>
+        android:text="Select an Image and Predict"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 </LinearLayout>
